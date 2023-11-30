@@ -1,0 +1,107 @@
+
+
+.min-width {
+  min-width: 100px; 
+  overflow: hidden;
+  text-overflow: ellipsis; 
+  white-space: nowrap;
+}
+
+.table-bordered th,
+.table-bordered td {
+  border: none; /* Убираем границы ячеек */
+}
+
+.table-bordered th:not(:first-child),
+.table-bordered td:not(:first-child) {
+  border-left: none; /* Убираем левые границы, кроме первой колонки */
+}
+
+.table-bordered th:last-child,
+.table-bordered td:last-child {
+  border-right: none; /* Убираем правые границы, кроме последней колонки */
+}
+
+.table-bordered th {
+  background-color: #f8f9fa; /* Цвет фона для заголовков */
+}
+
+/* Добавим отступы между ячейками */
+.table td,
+.table th {
+  padding: 0.5rem;
+}
+
+/* Уменьшим отступы внутри ячеек */
+.table td.text-right,
+.table th.text-right,
+.table td.text-center,
+.table th.text-center {
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
+}
+
+
+/* Примерные стили для мобильных устройств */
+@media (max-width: 768px) {
+  .custom-bg-color thead {
+    display: none;
+  }
+
+  .custom-bg-color tr:first-child td:nth-child(2)::before {
+    content: "план";
+  }
+  
+  .custom-bg-color tr:first-child td:nth-child(3)::before {
+    content: "факт";
+  }
+  
+  .custom-bg-color tr:first-child td:nth-child(4)::before {
+    content: "процент";
+  }
+
+  .custom-bg-color tr:nth-child(2) td:nth-child(2)::before {
+    content: "план";
+  }
+  
+  .custom-bg-color tr:nth-child(2) td:nth-child(3)::before {
+    content: "факт";
+  }
+  
+  .custom-bg-color tr:nth-child(2) td:nth-child(4)::before {
+    content: "процент";
+  }
+
+  .custom-bg-color tr:nth-child(3) td:nth-child(2)::before {
+    content: "план";
+  }
+  
+  .custom-bg-color tr:nth-child(3) td:nth-child(3)::before {
+    content: "факт";
+  }
+  
+  .custom-bg-color tr:nth-child(3) td:nth-child(4)::before {
+    content: "процент";
+  }
+
+
+  .custom-bg-color tr {
+    display: block;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+  }
+
+  .custom-bg-color td {
+    display: block;
+    text-align: right;
+    border-bottom: 1px solid #ccc;
+    padding-left: 10px; /* Добавляем отступ слева для текста */
+  }
+
+  .custom-bg-color td::before {
+    content: attr(data-label);
+    float: left;
+    font-weight: bold;
+  }
+}
+

@@ -1,0 +1,9 @@
+input[type="month"] {
+    background: transparent;
+    font-size: 18px;
+    color: dark;
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 5px;
+  }
+  
